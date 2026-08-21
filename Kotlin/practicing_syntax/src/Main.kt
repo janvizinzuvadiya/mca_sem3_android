@@ -11,18 +11,17 @@ fun main() {
 //    print("enter age:")
 //    var age = readLine()?.toInt()
 //    println("Information--------------------")
-//
+// 
 //    println("Name :" + name)
 //    println("Age :" + age)
 //
 //    println("---------------------------------")
 
-
 //    2
 //    println("Enter First Value->")
 //    var num1 = readln().toInt()
 //    println("Enter First Value->")
-//    var num2 = readln().toInt()
+//    var num2 = readln().toInt()   
 //
 //    var sum = num1 + num2
 //    var sub = num1 - num2
@@ -70,7 +69,7 @@ fun main() {
 //5
 
 
-    //    using function
+//    using function
 
 //        print("Enter Sentance ->")
 //        var sen = readln()
@@ -122,7 +121,7 @@ fun main() {
 //        var ele = readln().toInt()
 //
 //        for(i in 0 until ele)
-//        {
+//        { 
 //            print("Enter Value ->" )
 //            var num = readln().toInt()
 //
@@ -251,7 +250,7 @@ fun main() {
 //    }
 //
 //    println("Maximum number: $max")
-//    println("Second Largest number: $smax"
+//    println("Second Largest number: $smax")
 
 
 //    13
