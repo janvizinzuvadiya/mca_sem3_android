@@ -1,6 +1,7 @@
 package com.example.database_demo
 
 import android.app.appsearch.StorageInfo
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -20,11 +21,9 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main);
 
-        var id = 1;
-
         val fnm : EditText = findViewById(R.id.editTextText4);
         val lnm : EditText = findViewById(R.id.editTextText5);
-        val age : EditText = findViewById(R.id.editTextText6);
+//        val age : EditText = findViewById(R.id.editTextText6);
         val sp : Spinner = findViewById(R.id.spinner2);
         val gen : RadioGroup = findViewById(R.id.rg1);
         val btn : Button = findViewById(R.id.button2);
@@ -46,12 +45,12 @@ class MainActivity : AppCompatActivity() {
 
             val db = openOrCreateDatabase("mydb",MODE_PRIVATE,null);
             db.execSQL("CREATE TABLE IF NOT EXISTS user ( id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,lnm TEXT, city TEXT, gender TEXT)");
-            db.execSQL("INSERT INTO user VALUES(?,?,?,?,?)",arrayOf(id,fnm.text.toString(),lnm.text.toString(),selcity,selgen));
+            db.execSQL("INSERT INTO user (name, lnm, city, gender) VALUES (?, ?, ?, ?)",arrayOf(fnm.text.toString(),lnm.text.toString(),selcity,selgen));
 
-            id++;
+            Toast.makeText(this,"You have Registered Successfully!!!", Toast.LENGTH_LONG).show();
 
-         Toast.makeText(this,"Data Inserted!!!", Toast.LENGTH_LONG).show();
-
+            val intent = Intent(this, DisplayActivity::class.java);
+            startActivity(intent)
         }
 
     }
